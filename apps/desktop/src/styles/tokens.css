@@ -1,0 +1,38 @@
+:root {
+  color-scheme: dark;
+  --bg-canvas: oklch(0.155 0.012 65);
+  --bg-panel: oklch(0.205 0.016 68);
+  --bg-panel-deep: oklch(0.135 0.008 65);
+  --bg-elevated: oklch(0.25 0.023 68);
+  --bg-hover: oklch(0.30 0.028 68);
+  --line-subtle: oklch(0.88 0.035 76 / 0.09);
+  --line-strong: oklch(0.88 0.035 76 / 0.19);
+  --text-primary: oklch(0.935 0.019 78);
+  --text-secondary: oklch(0.76 0.027 72);
+  --text-tertiary: oklch(0.66 0.024 72);
+  --accent: oklch(0.78 0.085 74);
+  --accent-ink: oklch(0.235 0.027 63);
+  --accent-soft: oklch(0.84 0.077 76 / 0.09);
+  --danger: oklch(0.77 0.092 30);
+  --danger-soft: oklch(0.77 0.092 30 / 0.09);
+  --warning: oklch(0.82 0.09 76);
+  --warning-soft: oklch(0.82 0.09 76 / 0.09);
+  --success: oklch(0.77 0.045 135);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --font-body: "Segoe UI Variable Text", "Microsoft YaHei UI", "Segoe UI", sans-serif;
+  --font-display: "Segoe UI Variable Display", "Microsoft YaHei UI", "Segoe UI", sans-serif;
+  --font-mono: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+  --z-base: 0;
+  --z-header: 10;
+  --z-drawer: 20;
+}

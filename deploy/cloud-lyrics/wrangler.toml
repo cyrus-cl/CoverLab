@@ -1,0 +1,13 @@
+name = "coverlab-lyrics"
+main = "worker.mjs"
+compatibility_date = "2026-11-07"
+workers_dev = true
+preview_urls = false
+
+[[durable_objects.bindings]]
+name = "BUDGET"
+class_name = "Budget"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Budget"]

@@ -1,0 +1,359 @@
+{
+  "scope": "Unmodified PyAV 18.1.0 Windows wheel native runtime; local preview provenance, no legal compliance assertion",
+  "pyav_version": "18.1.0",
+  "ffmpeg_version_info": "8.1.2",
+  "library_versions": {
+    "libavutil": [
+      60,
+      26,
+      102
+    ],
+    "libavcodec": [
+      62,
+      28,
+      102
+    ],
+    "libavformat": [
+      62,
+      12,
+      102
+    ],
+    "libavdevice": [
+      62,
+      3,
+      102
+    ],
+    "libavfilter": [
+      11,
+      14,
+      102
+    ],
+    "libswscale": [
+      9,
+      5,
+      102
+    ],
+    "libswresample": [
+      6,
+      3,
+      102
+    ]
+  },
+  "wheel": {
+    "url": "https://files.pythonhosted.org/packages/33/b4/76ba21e46704f632004276b85289a1582e95f5eff760436d6149875a1881/av-18.1.0-cp311-abi3-win_amd64.whl",
+    "hash": "sha256:ea1480b7a8d5405cb5f382b344731bf125fd2c1c6fae3964f6c48595628387ff",
+    "size": 27595679,
+    "upload-time": "2026-08-12T22:27:35.177Z"
+  },
+  "pyav_source": "https://github.com/PyAV-Org/PyAV/tree/v18.1.0",
+  "pyav_build": "https://github.com/PyAV-Org/PyAV/tree/v18.1.0/.github/workflows",
+  "vendor_source_reference": "https://github.com/PyAV-Org/pyav-ffmpeg/tree/8.1.2-1",
+  "vendor_reference_provenance": "Link supplied by upstream maintainer for this exact wheel in issue 2270. Corresponding-source completeness and commercial exception terms have not been independently established.",
+  "ffmpeg_source": "https://github.com/FFmpeg/FFmpeg/tree/n8.1.2",
+  "x264_source": "https://code.videolan.org/videolan/x264/-/tree/b35605ace3ddf7c1a5d67a2eb553f034aef41d55",
+  "x265_source": "https://bitbucket.org/multicoreware/x265_git/src/master/",
+  "licensing_discussion": "https://github.com/PyAV-Org/PyAV/issues/2270",
+  "boundary": "FFmpeg DLL labels report LGPLv3, while PE imports include GPL x264/x265 encoder DLLs. Do not describe the complete native stack as LGPL-only. No commercial exception license has been obtained or inferred; public redistribution requires a separately established licensing and corresponding-source route.",
+  "files": [
+    {
+      "filename": "avcodec-62-984de33114b7fa384296817dec999c9d.dll",
+      "bytes": 19266048,
+      "sha256": "777704d8914bb99e5d78f3a0e7424031b5376621f2e7c60e83b84e77fcc7e2d7",
+      "imports": [
+        "libdav1d-959ebc1340f7dfcbcf8e299a26281738.dll",
+        "libmp3lame-0-da02696cc34a9bbc1d1d4f67a85cfbef.dll",
+        "libopencore-amrnb-0-b8933128305cd084d40426d0d2c0d9ef.dll",
+        "libopencore-amrwb-0-49da3acfc50704f92538d74aca03c3b8.dll",
+        "libopus-0-4369edc456631a3cc933d7918747e5d2.dll",
+        "libSvtAv1Enc-c4dd99c98ddcdb013e820dbd68a30e26.dll",
+        "libvpl-969a52d626b0390fc34f6a4fb0b08d7e.dll",
+        "libvpx-1-d869f8b2cb42d58b35545ffbfb0f7509.dll",
+        "libwebp-4bf4e57964c7a01c09ce39470d6b67ca.dll",
+        "libwebpmux-9cf6581f8709616d9591befbb1a2264b.dll",
+        "libx264-165-f3a909470ddc2d85ed21eda3d0fb7954.dll",
+        "libx265-efe48a158520a59ef99c0a0b3eb835ae.dll",
+        "libiconv-2-6ce5f4ff92ada49d6f23a8e413455502.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "ole32.dll",
+        "zlib1-79e0c4f9db71cb511398c504b832d395.dll",
+        "avutil-60-cc1777f859dcfd98b8019bdf459e774e.dll",
+        "swresample-6-0158536d5c4197d7d623445553ce9472.dll"
+      ],
+      "license": "LGPL version 3 or later",
+      "configuration": "--disable-static --enable-shared --libdir=/c/cibw/vendor/lib --prefix=/c/cibw/vendor --disable-programs --disable-doc --disable-libxml2 --disable-lzma --disable-libtheora --disable-libfreetype --disable-libfontconfig --disable-libbluray --disable-libopenjpeg --enable-mediafoundation --enable-version3 --disable-alsa --disable-gnutls --enable-libdav1d --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopus --enable-libsvtav1 --enable-libvpx --enable-libwebp --disable-libxcb --enable-zlib --enable-libx264 --enable-libx265 --enable-nvenc --enable-nvdec --enable-amf --enable-libvpl --disable-encoder='avui,dca,mlp,opus,s302m,sonic,sonic_ls,truehd' --disable-decoder=sonic --disable-libjack --disable-indev=jack --disable-filter=gfxcapture"
+    },
+    {
+      "filename": "avdevice-62-bf7a3ffbb6a4b577f24a39ea98a958d5.dll",
+      "bytes": 155648,
+      "sha256": "f97c1c7539fddbf5d713c0904bb4340f9000705bdb2d950338f6b39dba20cb3a",
+      "imports": [
+        "GDI32.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "ole32.dll",
+        "OLEAUT32.dll",
+        "SHLWAPI.dll",
+        "USER32.dll",
+        "AVICAP32.dll",
+        "avcodec-62-984de33114b7fa384296817dec999c9d.dll",
+        "avfilter-11-aef80fc767dc77e0319469b5bdcdf998.dll",
+        "avformat-62-b6d6bb16ff0b7753371e2d0b285c9dc0.dll",
+        "avutil-60-cc1777f859dcfd98b8019bdf459e774e.dll"
+      ],
+      "license": "LGPL version 3 or later",
+      "configuration": "--disable-static --enable-shared --libdir=/c/cibw/vendor/lib --prefix=/c/cibw/vendor --disable-programs --disable-doc --disable-libxml2 --disable-lzma --disable-libtheora --disable-libfreetype --disable-libfontconfig --disable-libbluray --disable-libopenjpeg --enable-mediafoundation --enable-version3 --disable-alsa --disable-gnutls --enable-libdav1d --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopus --enable-libsvtav1 --enable-libvpx --enable-libwebp --disable-libxcb --enable-zlib --enable-libx264 --enable-libx265 --enable-nvenc --enable-nvdec --enable-amf --enable-libvpl --disable-encoder='avui,dca,mlp,opus,s302m,sonic,sonic_ls,truehd' --disable-decoder=sonic --disable-libjack --disable-indev=jack --disable-filter=gfxcapture"
+    },
+    {
+      "filename": "avfilter-11-aef80fc767dc77e0319469b5bdcdf998.dll",
+      "bytes": 5890560,
+      "sha256": "26e5bd7b01ad8874db7842c03f4ee0fa1466f1192f2f245c1cdccc8acb81ebd2",
+      "imports": [
+        "libvpl-969a52d626b0390fc34f6a4fb0b08d7e.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "ole32.dll",
+        "zlib1-79e0c4f9db71cb511398c504b832d395.dll",
+        "avcodec-62-984de33114b7fa384296817dec999c9d.dll",
+        "avformat-62-b6d6bb16ff0b7753371e2d0b285c9dc0.dll",
+        "avutil-60-cc1777f859dcfd98b8019bdf459e774e.dll",
+        "swresample-6-0158536d5c4197d7d623445553ce9472.dll",
+        "swscale-9-0c9886c118598c54e159ef2267ff99f3.dll"
+      ],
+      "license": "LGPL version 3 or later",
+      "configuration": "--disable-static --enable-shared --libdir=/c/cibw/vendor/lib --prefix=/c/cibw/vendor --disable-programs --disable-doc --disable-libxml2 --disable-lzma --disable-libtheora --disable-libfreetype --disable-libfontconfig --disable-libbluray --disable-libopenjpeg --enable-mediafoundation --enable-version3 --disable-alsa --disable-gnutls --enable-libdav1d --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopus --enable-libsvtav1 --enable-libvpx --enable-libwebp --disable-libxcb --enable-zlib --enable-libx264 --enable-libx265 --enable-nvenc --enable-nvdec --enable-amf --enable-libvpl --disable-encoder='avui,dca,mlp,opus,s302m,sonic,sonic_ls,truehd' --disable-decoder=sonic --disable-libjack --disable-indev=jack --disable-filter=gfxcapture"
+    },
+    {
+      "filename": "avformat-62-b6d6bb16ff0b7753371e2d0b285c9dc0.dll",
+      "bytes": 2845184,
+      "sha256": "a3494c5304c387518e0d5136ed9bf5e5fc1a3b227ce3f380357149ee09717ff2",
+      "imports": [
+        "CRYPT32.dll",
+        "libiconv-2-6ce5f4ff92ada49d6f23a8e413455502.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "ncrypt.dll",
+        "Secur32.dll",
+        "WS2_32.dll",
+        "zlib1-79e0c4f9db71cb511398c504b832d395.dll",
+        "avcodec-62-984de33114b7fa384296817dec999c9d.dll",
+        "avutil-60-cc1777f859dcfd98b8019bdf459e774e.dll"
+      ],
+      "license": "LGPL version 3 or later",
+      "configuration": "--disable-static --enable-shared --libdir=/c/cibw/vendor/lib --prefix=/c/cibw/vendor --disable-programs --disable-doc --disable-libxml2 --disable-lzma --disable-libtheora --disable-libfreetype --disable-libfontconfig --disable-libbluray --disable-libopenjpeg --enable-mediafoundation --enable-version3 --disable-alsa --disable-gnutls --enable-libdav1d --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopus --enable-libsvtav1 --enable-libvpx --enable-libwebp --disable-libxcb --enable-zlib --enable-libx264 --enable-libx265 --enable-nvenc --enable-nvdec --enable-amf --enable-libvpl --disable-encoder='avui,dca,mlp,opus,s302m,sonic,sonic_ls,truehd' --disable-decoder=sonic --disable-libjack --disable-indev=jack --disable-filter=gfxcapture"
+    },
+    {
+      "filename": "avutil-60-cc1777f859dcfd98b8019bdf459e774e.dll",
+      "bytes": 1145856,
+      "sha256": "ff4aae43357698825fa5392764d3b680e36c1846b75677bdbf313d8c141ece6d",
+      "imports": [
+        "libvpl-969a52d626b0390fc34f6a4fb0b08d7e.dll",
+        "bcrypt.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1-02332fab016bf884a2a7a7b2ece22ffe.dll",
+        "USER32.dll"
+      ],
+      "license": "LGPL version 3 or later",
+      "configuration": "--disable-static --enable-shared --libdir=/c/cibw/vendor/lib --prefix=/c/cibw/vendor --disable-programs --disable-doc --disable-libxml2 --disable-lzma --disable-libtheora --disable-libfreetype --disable-libfontconfig --disable-libbluray --disable-libopenjpeg --enable-mediafoundation --enable-version3 --disable-alsa --disable-gnutls --enable-libdav1d --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopus --enable-libsvtav1 --enable-libvpx --enable-libwebp --disable-libxcb --enable-zlib --enable-libx264 --enable-libx265 --enable-nvenc --enable-nvdec --enable-amf --enable-libvpl --disable-encoder='avui,dca,mlp,opus,s302m,sonic,sonic_ls,truehd' --disable-decoder=sonic --disable-libjack --disable-indev=jack --disable-filter=gfxcapture"
+    },
+    {
+      "filename": "libdav1d-959ebc1340f7dfcbcf8e299a26281738.dll",
+      "bytes": 2139136,
+      "sha256": "959ebc1340f7dfcbcf8e299a26281738d73b53c2da0a3ceb1a1df80ac0c41b4b",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libgcc_s_seh-1-4c0a762e4178b574f72d1ef1f8bb5fc9.dll",
+      "bytes": 150016,
+      "sha256": "99a25df00a49a5e1ff131533416faa8d4686dd09a9a800633bc56ce93f69b5a6",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1-02332fab016bf884a2a7a7b2ece22ffe.dll"
+      ]
+    },
+    {
+      "filename": "libiconv-2-6ce5f4ff92ada49d6f23a8e413455502.dll",
+      "bytes": 1141248,
+      "sha256": "6ce5f4ff92ada49d6f23a8e4134555028a60cbf22ac4bb5ac78b12a2727676ec",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libmp3lame-0-da02696cc34a9bbc1d1d4f67a85cfbef.dll",
+      "bytes": 425472,
+      "sha256": "da02696cc34a9bbc1d1d4f67a85cfbef40a699da443aadb03551d960d2909ea7",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libopencore-amrnb-0-b8933128305cd084d40426d0d2c0d9ef.dll",
+      "bytes": 180224,
+      "sha256": "b8933128305cd084d40426d0d2c0d9ef8c9a52b10a383aac7ec24fed03f499ad",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libopencore-amrwb-0-49da3acfc50704f92538d74aca03c3b8.dll",
+      "bytes": 96256,
+      "sha256": "49da3acfc50704f92538d74aca03c3b838195ae4de88be98667e869c2aba0477",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libopus-0-4369edc456631a3cc933d7918747e5d2.dll",
+      "bytes": 482816,
+      "sha256": "4369edc456631a3cc933d7918747e5d2d111056dbc8a85b01330b5a53c062d44",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libsharpyuv-8b869e30854bf3db317a2a93d0782c3d.dll",
+      "bytes": 51712,
+      "sha256": "8b869e30854bf3db317a2a93d0782c3df2e9a03d1360320815257f0cbd306c63",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libstdc++-6-2d5c346d47ad531ef9f5185db0e8cef3.dll",
+      "bytes": 2660352,
+      "sha256": "80c66b5220c554aa61b72cce0e9322547d111f81179792dde4d9a645255d0e5a",
+      "imports": [
+        "libgcc_s_seh-1-4c0a762e4178b574f72d1ef1f8bb5fc9.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1-02332fab016bf884a2a7a7b2ece22ffe.dll"
+      ]
+    },
+    {
+      "filename": "libSvtAv1Enc-c4dd99c98ddcdb013e820dbd68a30e26.dll",
+      "bytes": 7673344,
+      "sha256": "c4dd99c98ddcdb013e820dbd68a30e26472894f1d788e2862376e0404542f045",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libvpl-969a52d626b0390fc34f6a4fb0b08d7e.dll",
+      "bytes": 444416,
+      "sha256": "96a2ee0b9d4645791485f0f897fd4ea4d77f324e11918dbc10466fc949f7dca4",
+      "imports": [
+        "ADVAPI32.dll",
+        "libgcc_s_seh-1-4c0a762e4178b574f72d1ef1f8bb5fc9.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "ole32.dll",
+        "libstdc++-6-2d5c346d47ad531ef9f5185db0e8cef3.dll"
+      ]
+    },
+    {
+      "filename": "libvpx-1-d869f8b2cb42d58b35545ffbfb0f7509.dll",
+      "bytes": 2600960,
+      "sha256": "e0be857ba4f86709addb42c5e81fef2f565faf52c13fdb982f393ff74d92a0ca",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1-02332fab016bf884a2a7a7b2ece22ffe.dll"
+      ]
+    },
+    {
+      "filename": "libwebp-4bf4e57964c7a01c09ce39470d6b67ca.dll",
+      "bytes": 759296,
+      "sha256": "5f044e8cf8d0347fdd4d5fff197a64c20b9e2356ee1dd84c11a19638fd9901eb",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libsharpyuv-8b869e30854bf3db317a2a93d0782c3d.dll"
+      ]
+    },
+    {
+      "filename": "libwebpmux-9cf6581f8709616d9591befbb1a2264b.dll",
+      "bytes": 78336,
+      "sha256": "8394a4928195acdde4d7a5c3cc1f11b581890d061ca4b25ac35c8745376d06ae",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwebp-4bf4e57964c7a01c09ce39470d6b67ca.dll"
+      ]
+    },
+    {
+      "filename": "libwinpthread-1-02332fab016bf884a2a7a7b2ece22ffe.dll",
+      "bytes": 62464,
+      "sha256": "02332fab016bf884a2a7a7b2ece22ffe1dea58d56609f913026c22697dd950bc",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libx264-165-f3a909470ddc2d85ed21eda3d0fb7954.dll",
+      "bytes": 2267648,
+      "sha256": "f3a909470ddc2d85ed21eda3d0fb795404382727c59efa502e3b71cb5ef1aebc",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "filename": "libx265-efe48a158520a59ef99c0a0b3eb835ae.dll",
+      "bytes": 12746240,
+      "sha256": "57b1a6cad779aa841985cbdc22539802dd0c15f5832f1783bf38e72e09929f60",
+      "imports": [
+        "ADVAPI32.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libstdc++-6-2d5c346d47ad531ef9f5185db0e8cef3.dll"
+      ]
+    },
+    {
+      "filename": "swresample-6-0158536d5c4197d7d623445553ce9472.dll",
+      "bytes": 180736,
+      "sha256": "44b6c43045b783970832cd5cac9b3a7250a79476ca34cf90c98f02428749c8b0",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "avutil-60-cc1777f859dcfd98b8019bdf459e774e.dll"
+      ],
+      "license": "LGPL version 3 or later",
+      "configuration": "--disable-static --enable-shared --libdir=/c/cibw/vendor/lib --prefix=/c/cibw/vendor --disable-programs --disable-doc --disable-libxml2 --disable-lzma --disable-libtheora --disable-libfreetype --disable-libfontconfig --disable-libbluray --disable-libopenjpeg --enable-mediafoundation --enable-version3 --disable-alsa --disable-gnutls --enable-libdav1d --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopus --enable-libsvtav1 --enable-libvpx --enable-libwebp --disable-libxcb --enable-zlib --enable-libx264 --enable-libx265 --enable-nvenc --enable-nvdec --enable-amf --enable-libvpl --disable-encoder='avui,dca,mlp,opus,s302m,sonic,sonic_ls,truehd' --disable-decoder=sonic --disable-libjack --disable-indev=jack --disable-filter=gfxcapture"
+    },
+    {
+      "filename": "swscale-9-0c9886c118598c54e159ef2267ff99f3.dll",
+      "bytes": 2022912,
+      "sha256": "134b9ba046e46a4391a63d391635a0fc2ba12769295ffc0ffd9b2e78f1376472",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "avutil-60-cc1777f859dcfd98b8019bdf459e774e.dll"
+      ],
+      "license": "LGPL version 3 or later",
+      "configuration": "--disable-static --enable-shared --libdir=/c/cibw/vendor/lib --prefix=/c/cibw/vendor --disable-programs --disable-doc --disable-libxml2 --disable-lzma --disable-libtheora --disable-libfreetype --disable-libfontconfig --disable-libbluray --disable-libopenjpeg --enable-mediafoundation --enable-version3 --disable-alsa --disable-gnutls --enable-libdav1d --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopus --enable-libsvtav1 --enable-libvpx --enable-libwebp --disable-libxcb --enable-zlib --enable-libx264 --enable-libx265 --enable-nvenc --enable-nvdec --enable-amf --enable-libvpl --disable-encoder='avui,dca,mlp,opus,s302m,sonic,sonic_ls,truehd' --disable-decoder=sonic --disable-libjack --disable-indev=jack --disable-filter=gfxcapture"
+    },
+    {
+      "filename": "zlib1-79e0c4f9db71cb511398c504b832d395.dll",
+      "bytes": 126464,
+      "sha256": "79e0c4f9db71cb511398c504b832d395ba0fdee530f98efd1f861dd96de2ceb2",
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    }
+  ]
+}

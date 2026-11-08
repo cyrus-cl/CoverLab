@@ -1,0 +1,8 @@
+.lyric-batch-tools { display:flex; flex-wrap:wrap; align-items:end; gap:10px; padding:12px 0; }
+.lyric-batch-tools label { display:grid; gap:5px; flex:1 1 140px; min-width:0; }
+.lyric-batch-tools input { width:100%; min-width:0; }
+.lyric-save-bar { position:sticky; bottom:76px; z-index:3; padding:12px; border:1px solid var(--line-subtle); border-radius:12px; background:var(--bg-panel,#191919); }
+.lyrics-workspace .lyrics-editor-lines { max-height:560px; overflow:auto; padding:4px; scrollbar-gutter:stable; }
+.lyrics-workspace .timed-lyrics { max-height:560px; }
+.lyric-filter { display:flex; align-items:center; gap:8px; margin:10px 0; }
+.lrc-import input[type=file] { width:100%; margin:12px 0; }

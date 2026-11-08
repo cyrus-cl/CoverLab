@@ -1,0 +1,15 @@
+MediaPipe Tasks Vision 0.10.32
+Copyright The MediaPipe Authors. Licensed under the Apache License, Version 2.0.
+Source: https://github.com/google-ai-edge/mediapipe/tree/v0.10.32
+Package: https://registry.npmjs.org/@mediapipe/tasks-vision/-/tasks-vision-0.10.32.tgz
+
+MediaPipe Face Landmarker model bundle (float16, revision 1)
+Copyright Google. Official Face Detector, Face Mesh V2 and Blendshape V2 model
+cards identify Apache License, Version 2.0. The complete downloaded task bundle
+is redistributed without modification; output blendshapes are disabled.
+Source: https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task
+
+The Apache 2.0 license is included in LICENSE-APACHE-2.0.txt.
+Provenance, model cards and SHA-256 hashes are recorded in the source tree at
+docs/licenses/mediapipe. CoverLab's head-tracker worker is application glue,
+not a modification of the MediaPipe runtime or model files.

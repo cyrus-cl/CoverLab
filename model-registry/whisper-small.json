@@ -1,0 +1,61 @@
+{
+  "provider": "faster-whisper",
+  "provider_version": "1.2.1",
+  "ctranslate2_version": "4.8.4",
+  "av_version": "18.1.0",
+  "model_id": "faster-whisper-small",
+  "repository": "Systran/faster-whisper-small",
+  "revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "model_sha256": "da322ea44ac64cc7ead33315249adc6c0d3f06d673ccfe1fe05b84d94f5ac742",
+  "model_sha256_kind": "SHA256 of canonical JSON ModelSpec; file contents checked independently",
+  "size_bytes": 486212372,
+  "files": [
+    {
+      "filename": "model.bin",
+      "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "size_bytes": 483546902
+    },
+    {
+      "filename": "config.json",
+      "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828",
+      "size_bytes": 2370
+    },
+    {
+      "filename": "tokenizer.json",
+      "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+      "size_bytes": 2203239
+    },
+    {
+      "filename": "vocabulary.txt",
+      "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913",
+      "size_bytes": 459861
+    }
+  ],
+  "base_url": "https://huggingface.co/Systran/faster-whisper-small/resolve/536b0662742c02347bc0e980a01041f333bce120",
+  "license": "MIT",
+  "hash_provenance": "model.bin SHA256 is published in the official Hugging Face LFS API for immutable revision 536b0662742c02347bc0e980a01041f333bce120 and checked after downloading. Other file SHA256 digests were computed from the same pinned official bytes and additionally checked against upstream Git blob SHA1; these are not claimed as separately upstream-published SHA256 digests. All files are verified during prepare and again in the inference child.",
+  "sources": [
+    "https://huggingface.co/Systran/faster-whisper-small/tree/536b0662742c02347bc0e980a01041f333bce120",
+    "https://huggingface.co/api/models/Systran/faster-whisper-small?blobs=true",
+    "https://github.com/SYSTRAN/faster-whisper/blob/v1.2.1/README.md",
+    "https://github.com/SYSTRAN/faster-whisper/blob/v1.2.1/LICENSE",
+    "https://github.com/openai/whisper/blob/v20250625/LICENSE",
+    "https://github.com/PyAV-Org/PyAV/releases/tag/v19.0.0",
+    "https://github.com/SYSTRAN/faster-whisper/issues/1589"
+  ],
+  "inference": {
+    "device": "cpu",
+    "compute_type": "int8",
+    "word_timestamps": true,
+    "task": "transcribe",
+    "vad_filter": false,
+    "condition_on_previous_text": true,
+    "beam_size": 5,
+    "temperature": 0,
+    "hallucination_silence_threshold": 2.0,
+    "quality_notice": "Machine draft. Singing accuracy and word timing vary; this is not forced lyric alignment. No recognition quality score is inferred from successfully producing artifacts. Exact silence produces an empty result.",
+    "language": null
+  },
+  "runtime_note": "av 18.1.0 is pinned because PyAV 19 removed metadata_errors still used in faster-whisper 1.2.1.",
+  "evaluation_report": "docs/progress/2026-11-03-asr-upgrade-050.md"
+}

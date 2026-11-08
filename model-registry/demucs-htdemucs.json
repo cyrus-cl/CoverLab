@@ -1,0 +1,28 @@
+{
+  "provider": "demucs",
+  "provider_version": "4.0.1",
+  "model_id": "htdemucs",
+  "revision": "955717e8",
+  "filename": "955717e8-8726e21a.th",
+  "url": "https://dl.fbaipublicfiles.com/demucs/hybrid_transformer/955717e8-8726e21a.th",
+  "sha256": "8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4",
+  "official_hash_prefix": "8726e21a",
+  "size_bytes": 84141911,
+  "hash_provenance": "Downloaded from the official URL on 2026-11-02, calculated full SHA256, and checked its 8726e21a prefix against upstream files.txt and save_with_checksum implementation. Full digest is subsequently pinned; it is not represented as an upstream-published full digest.",
+  "license": "MIT",
+  "sources": [
+    "https://github.com/facebookresearch/demucs/blob/v4.0.1/demucs/remote/htdemucs.yaml",
+    "https://github.com/facebookresearch/demucs/blob/v4.0.1/demucs/remote/files.txt",
+    "https://github.com/facebookresearch/demucs/blob/v4.0.1/demucs/states.py",
+    "https://github.com/facebookresearch/demucs/blob/v4.0.1/LICENSE"
+  ],
+  "inference": {
+    "samplerate": 44100,
+    "channels": 2,
+    "shifts": 0,
+    "overlap": 0.25,
+    "device": "CUDA if available in installed Torch, otherwise CPU",
+    "instrumental": "sum of model drums, bass, and other estimates",
+    "quality_claim": "No quality score inferred from successfully writing output files"
+  }
+}

@@ -1,0 +1,20 @@
+.reprocess-confirmation { margin: 12px 0; padding: 14px 16px; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--bg-panel-deep); color: var(--text-primary); }
+.reprocess-confirmation p { font-size: 13px; line-height: 1.7; }
+.reprocess-confirmation > div { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.reprocess-confirmation .button { min-height: 34px; padding: 8px 12px; font-size: 12px; }
+.project-row__copy .project-row__location { white-space: normal; line-height: 1.5; font-size: 10px; color: var(--text-secondary); }
+.project-search-clear { display: grid; place-items: center; flex: 0 0 26px; width: 26px; height: 30px; border: 0; border-radius: 6px; color: var(--text-secondary); background: transparent; font-size: 20px; cursor: pointer; }
+.project-search-clear:hover { background: var(--bg-hover); color: var(--text-primary); }
+.contextual-result { margin-top: 12px; color: var(--success); font-size: 13px; line-height: 1.7; }
+.context-next { margin-top: 16px; min-height: 36px; padding: 8px 14px; font-size: 12px; }
+.event-history { border-top: 1px solid var(--line-subtle); padding-top: 14px; }
+.event-history > summary { color: var(--text-secondary); font-size: 12px; cursor: pointer; min-height: 32px; }
+.event-repeat { display: block; margin-top: 5px; color: var(--text-tertiary); font-size: 10px; }
+.lyric-workspace-slot { min-width: 0; border-radius: var(--radius-md); scroll-margin: 24px; }
+.project-switch-dialog { position: fixed; max-width: min(520px, calc(100vw - 40px)); padding: 28px; border: 1px solid var(--line-strong); border-radius: 18px; color: var(--text-primary); background: var(--bg-panel); box-shadow: 0 24px 90px oklch(0.08 0.006 65 / .55); }
+.project-switch-dialog::backdrop { background: oklch(0.1 0.008 65 / .7); }
+.project-switch-dialog h2 { font-size: 20px; }
+.project-switch-dialog p { margin-top: 12px; font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
+.project-switch-dialog__actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+.project-switch-dialog__actions .button { min-height: 38px; padding: 10px 16px; font-size: 13px; }
+.project-switch-dialog .button--danger { color: var(--danger); }

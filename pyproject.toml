@@ -1,0 +1,43 @@
+[project]
+name = "ai4music-workspace"
+version = "0.9.0"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  # Source-only dependencies for the historical local-ASR comparison tests.
+  "faster-whisper==1.2.1",
+  "av==18.1.0",
+  "ctranslate2==4.8.4",
+  "transformers==5.13.0",
+  "safetensors==0.8.0",
+  "httpx2>=2.15,<3",
+  "mypy==2.4.0",
+  "pyinstaller>=6,<7",
+  "pytest>=8.4,<9",
+  "pytest-asyncio>=1.2,<2",
+  "pytest-cov>=7,<8",
+  "pytest-timeout>=2.4,<3",
+  "ruff==0.17.2",
+]
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers"
+markers = [
+  "integration: exercises the local engine across process or database boundaries",
+  "model: downloads or loads real ML model weights",
+]
+testpaths = ["packages", "services", "tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[tool.uv.workspace]
+members = ["packages/*", "services/*"]

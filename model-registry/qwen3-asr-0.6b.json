@@ -1,0 +1,87 @@
+{
+  "model_id": "qwen3-asr-0.6b-hf",
+  "revision": "7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c",
+  "base_url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B-hf/resolve/7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c",
+  "files": [
+    {
+      "filename": "chat_template.jinja",
+      "sha256": "f50e6b694fbf4a683206e37869990d68333fe95d285730f084c838a34b0d98c2",
+      "size_bytes": 1434
+    },
+    {
+      "filename": "config.json",
+      "sha256": "9eecf6f1b383e343889c2e6010e632590fa57d4bc678e151c7d6a160a0dfb04a",
+      "size_bytes": 2398
+    },
+    {
+      "filename": "generation_config.json",
+      "sha256": "9939fc9388b79bd70757f938b87381e817173d6a6158f5af6506c0b73e775c3c",
+      "size_bytes": 165
+    },
+    {
+      "filename": "model.safetensors",
+      "sha256": "d3f212dd20abecd315d830bc54ae3865e56ebfc3276484e57b771288ba27fd35",
+      "size_bytes": 1564928088
+    },
+    {
+      "filename": "processor_config.json",
+      "sha256": "bc0b230081b44e629dd5b9045b78495615c1831b4b9f4cffe97bd37e82a6156a",
+      "size_bytes": 487
+    },
+    {
+      "filename": "tokenizer.json",
+      "sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05",
+      "size_bytes": 11429653
+    },
+    {
+      "filename": "tokenizer_config.json",
+      "sha256": "945e980986de2ca7768f3326bfdbb4fbea3406f972b8ae0be233089f2b253c11",
+      "size_bytes": 998
+    }
+  ],
+  "provider": "qwen3-asr+whisper-alignment",
+  "repository": "Qwen/Qwen3-ASR-0.6B-hf",
+  "license": "Apache-2.0",
+  "model_sha256": "38fdda8f3f9f3f16b9f7f514921d4e6594cf4d2ad13542981c59cf068c39f8da",
+  "model_sha256_kind": "SHA256 of canonical JSON ModelSpec; each file independently verified",
+  "size_bytes": 1576363223,
+  "download_bytes_with_alignment": 2062575595,
+  "alignment": {
+    "model_id": "faster-whisper-small",
+    "revision": "536b0662742c02347bc0e980a01041f333bce120",
+    "model_sha256": "da322ea44ac64cc7ead33315249adc6c0d3f06d673ccfe1fe05b84d94f5ac742",
+    "manifest": "whisper-small.json",
+    "method": "CTranslate2 small find_alignment/DTW on Qwen recognized text only; median_filter_width=7"
+  },
+  "runtime": {
+    "transformers": "5.13.0",
+    "safetensors": "0.8.0",
+    "torch": "2.5.1+cpu",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.4",
+    "librosa_required": false,
+    "external_audio_urls": false
+  },
+  "inference": {
+    "device": "cpu",
+    "compute_type": "float32 ASR; int8 alignment",
+    "cpu_threads_max": 4,
+    "chunk_max_seconds": 28,
+    "quiet_boundary_search_seconds": [
+      20,
+      28
+    ],
+    "do_sample": false,
+    "max_new_tokens": 384,
+    "language": null,
+    "reference_lyrics_prompt": false,
+    "raw_output": "lyrics.raw.json",
+    "probability_notice": "Whisper alignment likelihoods are not calibrated Qwen recognition accuracy."
+  },
+  "hash_provenance": "Official immutable HF manifest: model.safetensors and tokenizer.json match upstream LFS SHA256. Other SHA256 computed from pinned bytes after verifying official Git blob SHA1. Parent prepare and child both verify all files before inference.",
+  "sources": [
+    "https://huggingface.co/Qwen/Qwen3-ASR-0.6B-hf/tree/7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c",
+    "https://github.com/QwenLM/Qwen3-ASR/tree/7c6daf77a2421100f5fb066495372c00129d39ff",
+    "https://github.com/huggingface/transformers/tree/v5.13.0/src/transformers/models/qwen3_asr"
+  ]
+}

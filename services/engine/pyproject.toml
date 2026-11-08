@@ -1,0 +1,36 @@
+[project]
+name = "ai4music-engine"
+version = "0.9.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "ai4music-core",
+  "alembic>=1.17,<2",
+  "demucs==4.0.1",
+  "numpy>=2,<3",
+  "scipy>=1.15,<2",
+  "fastapi>=0.120,<1",
+  "structlog>=25,<26",
+  "soundfile==0.13.1",
+  "torch==2.5.1+cpu; sys_platform != 'darwin'",
+  "torchaudio==2.5.1+cpu; sys_platform != 'darwin'",
+  "torch==2.5.1; sys_platform == 'darwin'",
+  "torchaudio==2.5.1; sys_platform == 'darwin'",
+  "uvicorn>=0.37,<1",
+]
+
+[project.scripts]
+ai4music-engine = "ai4music_engine.launcher:main"
+
+[tool.uv.sources]
+ai4music-core = { workspace = true }
+torch = [{ index = "pytorch-cpu", marker = "sys_platform != 'darwin'" }]
+torchaudio = [{ index = "pytorch-cpu", marker = "sys_platform != 'darwin'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

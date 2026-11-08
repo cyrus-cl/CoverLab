@@ -1,0 +1,206 @@
+.recording-panel {
+  container: recording / inline-size;
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-panel-deep);
+}
+.recording-panel__heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.recording-panel__heading h2 { margin: 0; color: var(--text-primary); font-size: 16px; font-weight: 600; }
+.recording-panel__range, .recording-canvas-size { color: var(--text-secondary); font: 12px var(--font-mono); font-variant-numeric: tabular-nums; }
+.recording-panel__studio { display: grid; align-items: start; gap: var(--space-5); }
+.recording-panel__preview, .recording-panel__settings { min-width: 0; }
+.recording-panel__preview-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--space-2); margin-bottom: var(--space-2); }
+.recording-panel__preview-heading h3 { margin: 0; color: var(--text-secondary); font-size: 13px; font-weight: 550; }
+.recording-panel__canvas, .recording-panel__video {
+  display: block;
+  width: min(100%, calc(min(54dvh, 420px) * var(--recording-ratio)));
+  height: auto;
+  aspect-ratio: var(--recording-ratio);
+  margin-inline: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: #080808;
+  object-fit: contain;
+}
+.recording-panel__video { width: min(100%, calc(70dvh * var(--recording-ratio))); }
+.recording-panel__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.recording-panel__preview .recording-panel__actions { margin-top: var(--space-3); }
+.recording-panel__preview .button { min-height: 36px; padding: 8px 12px; font-size: 13px; }
+.recording-panel__note, .recording-panel__status { margin: var(--space-2) 0 0; color: var(--text-secondary); font-size: 13px; line-height: 1.6; }
+.recording-panel__monitor { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); margin-top: var(--space-3); }
+.recording-panel__monitor label { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); color: var(--text-secondary); font-size: 12px; }
+.recording-panel__monitor meter { width: min(104px, 32vw); height: 16px; accent-color: var(--accent); }
+.recording-panel__monitor output { color: var(--text-primary); font: 13px var(--font-mono); font-variant-numeric: tabular-nums; }
+.recording-panel__live { color: var(--accent); font-size: 12px; }
+.recording-current-line { display: flex; align-items: baseline; gap: var(--space-2); margin-top: var(--space-2); color: var(--text-secondary); font-size: 13px; overflow-wrap: anywhere; }
+.recording-current-line > span { color: var(--text-tertiary); font-size: 10px; }
+.recording-current-line.is-active > span { color: #f9cb38; }
+
+.camera-controls { min-width: 0; margin: 0; padding: 0; border: 0; }
+.camera-controls legend { padding: 0; margin-bottom: var(--space-2); color: var(--text-secondary); font-size: 13px; }
+.device-controls, .composition-controls, .camera-look-controls, .floating-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2) var(--space-3);
+  align-items: start;
+}
+.device-controls > label, .composition-controls > label, .camera-look-controls > label, .floating-controls > label, .portrait-position {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+.recording-panel .camera-controls select { width: 100%; min-width: 0; min-height: 34px; padding: 6px 9px; text-overflow: ellipsis; }
+.camera-options { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-3); margin-top: var(--space-1); }
+.camera-toggle { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; color: var(--text-secondary); font-size: 12px; cursor: pointer; }
+.recording-panel .camera-toggle input { flex: none; width: 16px; height: 16px; margin: 0; padding: 0; accent-color: var(--accent); }
+.composition-controls, .camera-controls > .camera-look-controls, .floating-controls, .paper-bag-settings {
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--line-subtle);
+}
+.camera-look-controls > label, .floating-controls > label:has(input) { grid-template-columns: minmax(0, 1fr) auto; }
+.camera-look-controls output, .floating-controls output { color: var(--accent); font-variant-numeric: tabular-nums; }
+.recording-panel .camera-controls input[type="range"] { grid-column: 1 / -1; width: 100%; height: 22px; margin: 0; padding: 0; accent-color: var(--accent); }
+.portrait-position [role="group"] { display: grid; grid-template-columns: repeat(3, 28px); gap: 4px; }
+.portrait-position button { display: grid; place-items: center; height: 28px; padding: 0; border: 1px solid var(--line-subtle); border-radius: 4px; background: var(--bg-canvas); cursor: pointer; }
+.portrait-position button span { width: 7px; height: 7px; border-radius: 2px; background: var(--text-tertiary); }
+.portrait-position button[aria-pressed="true"] { border-color: var(--accent); }
+.portrait-position button[aria-pressed="true"] span { background: var(--accent); }
+.recording-panel input:focus-visible, .recording-panel select:focus-visible, .portrait-position button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.paper-bag-settings p { margin: var(--space-1) 0 0; color: var(--text-secondary); font-size: 12px; line-height: 1.6; }
+.paper-bag-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 4px var(--space-3);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--bg-panel);
+  cursor: pointer;
+}
+.paper-bag-switch.is-enabled { background: color-mix(in srgb, var(--accent) 12%, var(--bg-panel-deep)); }
+.paper-bag-switch__identity { display: flex; align-items: center; gap: var(--space-2); }
+.paper-bag-switch__identity img { flex: none; object-fit: contain; }
+.paper-bag-switch strong { color: var(--text-primary); font-size: 14px; }
+.paper-bag-switch input { appearance: none; position: relative; flex: none; width: 42px; height: 24px; margin: 0; padding: 0; border: 1px solid var(--line-strong); border-radius: 24px; background: var(--bg-canvas); cursor: pointer; }
+.paper-bag-switch input::before { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--text-secondary); }
+.paper-bag-switch input:checked { border-color: var(--accent); background: var(--accent); }
+.paper-bag-switch input:checked::before { left: 21px; background: var(--bg-canvas); }
+.paper-bag-switch:has(input:disabled) { cursor: default; opacity: .65; }
+
+.recording-mix {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  margin: 0 0 var(--space-3);
+  padding: 0 var(--space-3) var(--space-3);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-panel);
+}
+.paper-bag-switch + .recording-mix { margin-top: var(--space-3); }
+.recording-mix legend { padding-inline: var(--space-1); color: var(--text-secondary); font-size: 13px; }
+.recording-mix__toggle { width: fit-content; }
+.recording-mix__toggle:has(input:disabled) { cursor: default; opacity: .6; }
+.recording-mix__hint { color: var(--text-secondary); font-size: 12px; }
+.recording-mix__readout, .recording-mix__source {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+.recording-mix__readout {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.recording-mix__readout output { color: var(--accent); font-variant-numeric: tabular-nums; }
+.recording-mix__slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 24px;
+  touch-action: none;
+  user-select: none;
+}
+.recording-mix__track {
+  position: relative;
+  flex: 1;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--line-strong);
+}
+.recording-mix__fill {
+  position: absolute;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+.recording-mix__thumb {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--bg-panel);
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: grab;
+}
+.recording-mix__thumb:active { cursor: grabbing; }
+.recording-mix__slider[data-disabled], .recording-mix__modes[data-disabled] { opacity: .55; }
+.recording-mix__slider[data-disabled] .recording-mix__thumb { cursor: default; }
+.recording-mix__source { display: grid; gap: var(--space-1); }
+.recording-mix__modes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+}
+.recording-mix__mode {
+  min-width: 0;
+  min-height: 32px;
+  padding: 4px;
+  border: 1px solid var(--line-subtle);
+  border-radius: 6px;
+  background: var(--bg-panel-deep);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.recording-mix__mode[data-state="checked"] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.recording-mix__mode:disabled { cursor: default; }
+.recording-mix__mode:focus-visible, .recording-mix__thumb:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.recording-panel__review { padding: var(--space-4); border: 1px solid var(--line-subtle); border-radius: var(--radius-md); background: var(--bg-canvas); }
+.recording-panel__review audio { display: block; width: 100%; }
+.recording-panel__review .recording-panel__actions { margin-top: var(--space-3); }
+.recording-panel__review .recording-panel__status { margin: 0; color: var(--success); }
+.recording-panel .button--danger { color: var(--danger); border-color: transparent; }
+.recording-panel .button--danger:hover { border-color: var(--danger); }
+.recording-panel__error { margin-top: var(--space-3); padding: var(--space-3); border: 1px solid var(--danger); border-radius: var(--radius-sm); color: var(--danger); background: var(--danger-soft); font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.recording-panel__error > p { margin: 0; }
+.recording-panel__error .recording-panel__actions { margin-top: var(--space-2); }
+
+@container recording (min-width: 570px) {
+  .recording-panel__studio:has(canvas) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .recording-panel__preview:has(canvas) { position: sticky; top: var(--space-3); }
+}
+@container recording (max-width: 240px) {
+  .device-controls, .composition-controls, .camera-look-controls, .floating-controls { grid-template-columns: 1fr; }
+}
