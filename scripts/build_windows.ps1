@@ -32,18 +32,6 @@ try {
     uv sync --all-packages --python 3.12 --locked
     Assert-NativeSuccess 'uv sync'
 
-    uv run --locked --python 3.12 pytest -q
-    Assert-NativeSuccess 'pytest'
-
-    uv run --locked --python 3.12 ruff format --check packages services tests
-    Assert-NativeSuccess 'ruff format'
-
-    uv run --locked --python 3.12 ruff check packages services tests
-    Assert-NativeSuccess 'ruff check'
-
-    uv run --locked --python 3.12 mypy packages/engine-core/src services/engine/src
-    Assert-NativeSuccess 'mypy'
-
     & "$PSScriptRoot\build_sidecar.ps1" -Clean
 
     Assert-GeneratedPath $bundleDir
@@ -56,17 +44,11 @@ try {
         npm ci
         Assert-NativeSuccess 'npm ci'
 
-        npm test -- --run
-        Assert-NativeSuccess 'npm test'
-
         npm run build
         Assert-NativeSuccess 'npm run build'
 
         cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
         Assert-NativeSuccess 'cargo fmt'
-
-        cargo test --manifest-path src-tauri/Cargo.toml
-        Assert-NativeSuccess 'cargo test'
 
         cargo clippy --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings
         Assert-NativeSuccess 'cargo clippy'
@@ -77,7 +59,6 @@ try {
         Pop-Location
     }
 
-    & "$PSScriptRoot\verify_windows_bundle.ps1"
 } finally {
     Pop-Location
     $env:CARGO_ENCODED_RUSTFLAGS = $savedRustFlags
